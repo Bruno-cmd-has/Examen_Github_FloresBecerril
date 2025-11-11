@@ -1,0 +1,115 @@
+:root{
+	--page-bg: #f3f6fb;
+	--card-bg: #ffffff;
+	--accent: #0b6efd; /* azul principal */
+	--accent-2: #ff6b35; /* naranja para títulos */
+	--text: #0f1724;
+	--muted: #556075;
+	--soft-shadow: 0 6px 18px rgba(15,23,42,0.06);
+}
+
+/* Reset y tipografía base */
+*{box-sizing:border-box}
+html,body{height:100%;}
+body{
+	margin:0;
+	background:var(--page-bg);
+	color:var(--text);
+	font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	line-height:1.6;
+	padding:1.5rem;
+}
+
+main{
+	max-width:980px;
+	margin:1.8rem auto;
+}
+
+/* Cabecera destacada */
+header{
+	text-align:center;
+	padding:2rem 1.25rem;
+	background: linear-gradient(135deg, var(--accent), #4a90ff 60%);
+	color:#fff;
+	border-radius:10px;
+	box-shadow: var(--soft-shadow);
+	margin-bottom:1.25rem;
+}
+header h1{
+	margin:0;
+	font-size:2.4rem;
+	letter-spacing:1px;
+	text-transform:uppercase;
+}
+header p{margin-top:.6rem;color:rgba(255,255,255,0.92);font-size:1.05rem}
+
+/* Secciones como tarjetas */
+section{
+	background:var(--card-bg);
+	padding:1.25rem 1.4rem;
+	border-radius:10px;
+	box-shadow: var(--soft-shadow);
+	margin-bottom:1rem;
+}
+
+/* Estilo para títulos de sección (diferente look) */
+section h2{
+	font-family: 'Georgia', 'Times New Roman', serif;
+	color:var(--accent-2);
+	margin:0 0 .6rem 0;
+	font-size:1.35rem;
+	border-bottom:3px solid rgba(0,0,0,0.04);
+	padding-bottom:.5rem;
+}
+
+/* Párrafos: color más suave y justificado para lectura */
+section p{
+	color:var(--muted);
+	margin: .45rem 0;
+	text-align:justify;
+}
+
+/* Listas ordenadas con estilo distinto */
+ol{
+	background: linear-gradient(180deg, rgba(11,110,253,0.02), rgba(255,107,53,0.01));
+	border-left:4px solid var(--accent);
+	padding: .8rem 1rem;
+	margin: .6rem 0 0 0;
+	border-radius:6px;
+}
+ol li{
+	margin: .5rem 0;
+	color:var(--text);
+	font-weight:600;
+}
+
+/* Figura e imagen responsiva */
+figure{ text-align:center; margin:1.25rem 0; }
+.responsive{ max-width:100%; height:auto; display:block; margin:0 auto; border-radius:8px; box-shadow:0 8px 20px rgba(11,103,253,0.12); }
+figcaption{ font-size:.95rem; color:var(--muted); margin-top:.5rem }
+
+/* Pie de página */
+footer{
+	text-align:center;
+	color:var(--muted);
+	margin-top:1.25rem;
+	font-size:.95rem;
+}
+
+/* Enlaces */
+a{ color:var(--accent); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+/* Pequeños ajustes responsivos */
+@media (max-width:640px){
+	header h1{ font-size:1.6rem }
+	main{ margin:1rem auto; }
+	section{ padding:1rem }
+}
+
+/* Utilidades */
+.muted{ color:var(--muted) }
+.center{ text-align:center }
+
